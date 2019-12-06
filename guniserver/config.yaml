@@ -1,0 +1,15 @@
+Logging:
+  log_level: "DEBUG"               # DEBUG,INFO,WARNING,ERROR,CRITICAL
+  log_file: "log/guniserver.log"  # log file
+  max_size: 5                     # size of log file in Megabytes
+  back_count: 20                  # sie of file pool
+Server:
+  host: '127.0.0.1'
+  port: 9600
+  worker: 4
+  concurrency: 1024               # limit of concurrency
+  reqs_queued: 8                  # request data queued in K bytes
+  t_keep_alive: 30                # timer of keeping alive in seconds
+  c_keep_alive: 5                 # counter of keeping alive
+  app: 'app.sample:sapp'
+
